@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ai",
+  "version": "${version}",
+  "name": "mineral_AI",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/ai/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.jajucolor.github.ai.client.mineral_AIClient"
+    ],
+    "main": [
+      "io.github.jajucolor.github.ai.mineral_AI"
+    ]
+  },
+  "mixins": [
+    "ai.mixins.json",
+    {
+      "config": "ai.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
